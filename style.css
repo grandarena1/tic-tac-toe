@@ -1,0 +1,41 @@
+/* General */
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(225, 225, 231);
+  font-family: 'Helvetica Neue', sans-serif;
+  display: grid;
+  grid-template-rows: 1.5fr 7fr 1fr;
+}
+
+h6 {
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+/* Header */
+
+.header {
+  background-color: rgb(91, 91, 123);
+  padding: 10px;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Gameboard */
+.gameboard {
+  border: 1px solid black;
+}
+
+/* Footer */
+.footer {
+  background-color: rgb(91, 91, 123);
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
