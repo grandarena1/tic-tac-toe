@@ -4,21 +4,27 @@
   width: 100vw;
   height: 100vh;
   background-color: rgb(225, 225, 231);
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: Helvetica, sans-serif;
   display: grid;
   grid-template-rows: 1.5fr 7fr 1fr;
+}
+
+h1 {
+  letter-spacing: 3px;
+  font-size: 40px;
 }
 
 h6 {
   font-family: Helvetica, sans-serif;
   font-size: 14px;
+  letter-spacing: 1.2px;
+  font-weight: bold;
 }
 
 /* Header */
 
 .header {
   background-color: rgb(91, 91, 123);
-  padding: 10px;
   color: white;
   text-align: center;
   display: flex;
@@ -27,13 +33,43 @@ h6 {
 }
 
 /* Gameboard */
+
+.gameboard-container {
+  background-color: rgb(91, 91, 123);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .gameboard {
-  border: 1px solid black;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: repeat(3, minmax(75px, 100px));
+  grid-template-columns: repeat(3, minmax(75px, 100px));
+  gap: 12px;
+}
+
+.gamecard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(234, 234, 237);
+  color: rgba(0, 0, 0, 0.657);
+  border-radius: 5px;
+  border: 2px solid rgb(164, 164, 164);
+  box-shadow: 0px 0px 10px 2px #7a7a7a26;
+  transition-property: all;
+  transition-duration: 200ms;
+}
+
+.gamecard:hover {
+  box-shadow: 0px 0px 10px 5px rgba(184, 183, 183, 0.6);
+  cursor: pointer;
 }
 
 /* Footer */
 .footer {
-  background-color: rgb(91, 91, 123);
+  background-color: rgb(79, 79, 107);
   text-align: center;
   color: white;
   display: flex;
