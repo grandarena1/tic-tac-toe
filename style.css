@@ -24,7 +24,7 @@ h6 {
 /* Header */
 
 .header {
-  background-color: rgb(91, 91, 123);
+  background-color: rgb(79, 79, 107);
   color: white;
   text-align: center;
   display: flex;
@@ -41,15 +41,17 @@ h6 {
   align-items: center;
 }
 
-.gameboard {
+#gameboard {
   display: grid;
   justify-content: center;
   grid-template-rows: repeat(3, minmax(75px, 100px));
   grid-template-columns: repeat(3, minmax(75px, 100px));
   gap: 12px;
+  font-size: 40px;
+  font-weight: bold;
 }
 
-.gamecard {
+.square {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,8 +64,62 @@ h6 {
   transition-duration: 200ms;
 }
 
-.gamecard:hover {
+.square:hover {
   box-shadow: 0px 0px 10px 5px rgba(184, 183, 183, 0.6);
+  cursor: pointer;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+#message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gold;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+#controls, #message {
+  background-color: rgb(91, 91, 123);
+}
+
+input {
+  background-color: rgb(79, 79, 107);
+  border: none;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  border: white 1px solid;
+}
+
+input::placeholder {
+  color: lightgrey;
+  letter-spacing: 2px;
+}
+
+#start-button, #restart-button {
+  background-color: rgb(79, 79, 107);
+  color: white;
+  border: none;
+  padding: 5px;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  letter-spacing: 2px;
+}
+
+#start-button:hover, #restart-button:hover {
+  color: black;
+  background-color: white;
   cursor: pointer;
 }
 
